@@ -1,0 +1,44 @@
+.Button {
+  &--primary {
+    text-align: center;
+    min-width: 134px;
+    min-height: 60px;
+    align-items: center;
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    background-color: #2878c4;
+    border: 2px solid #2878c4;
+    color: #ffffff;
+    padding: 18px 24px;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid #2878c4;
+    color: #2878c4;
+    text-align: center;
+    text-align: center;
+    min-width: 134px;
+    min-height: 60px;
+    align-items: center;
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    padding: 18px 24px;
+
+    &:hover {
+      background-color: #2878c4;
+      border: 2px solid #2878c4;
+      color: #ffffff;
+    }
+  }
+}

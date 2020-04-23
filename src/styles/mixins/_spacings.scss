@@ -1,0 +1,55 @@
+// Spacing mixins
+
+//Margin
+
+@mixin make-margin($prefix, $value) {
+  .m--#{$prefix} {
+    margin: $value;
+  }
+  .ml--#{$prefix} {
+    margin-left: $value;
+  }
+  .mr--#{$prefix} {
+    margin-right: $value;
+  }
+  .mt--#{$prefix} {
+    margin-top: $value;
+  }
+  .mb--#{$prefix} {
+    margin-bottom: $value;
+  }
+  .mx--#{prefix} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my--#{prefix} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}
+
+@mixin make-padding($prefix, $value) {
+  .p--#{$prefix} {
+    padding: $value;
+  }
+  .pl--#{$prefix} {
+    padding-left: $value;
+  }
+  .pr--#{$prefix} {
+    padding-right: $value;
+  }
+  .pt--#{$prefix} {
+    padding-top: $value;
+  }
+  .pb--#{$prefix} {
+    padding-bottom: $value;
+  }
+  .px--#{prefix} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py--#{prefix} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}

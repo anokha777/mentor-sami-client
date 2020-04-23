@@ -1,0 +1,123 @@
+/***********************
+Typography
+************************/
+
+@mixin h1($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+
+  @include breakpoint($md) {
+    font-size: 46px $imp;
+    line-height: $lh--h1 $imp;
+  }
+  font-family: $font-reg $imp;
+  font-size: 32px $imp;
+  line-height: $lh--h1-base $imp;
+}
+
+@mixin h2($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+
+  @include breakpoint($md) {
+    font-size: 30px $imp;
+    line-height: $lh--h2 $imp;
+  }
+  font-family: $font-reg $imp;
+  font-size: 24px $imp;
+  line-height: $lh--h2-base $imp;
+}
+
+@mixin h3($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+
+  @include breakpoint($md) {
+    font-size: 24px $imp;
+    line-height: $lh--h3 $imp;
+  }
+  font-family: $font-reg $imp;
+  font-size: 18px $imp;
+  line-height: $lh--h3-base $imp;
+}
+
+@mixin body-large($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+
+  @include breakpoint($md) {
+    font-size: 18px $imp;
+    line-height: $lh--large $imp;
+  }
+  font-family: $font-reg $imp;
+  font-size: 16px $imp;
+  font-weight: 500 $imp;
+  line-height: $lh--large $imp;
+}
+
+@mixin body-regular($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+  font-family: $font-reg $imp;
+  font-size: 16px $imp;
+  font-weight: 500 $imp;
+  line-height: $lh--regular $imp;
+}
+
+@mixin body-small($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+  font-family: $font-reg $imp;
+  font-size: 14px $imp;
+  font-weight: 500 $imp;
+  line-height: $lh--small $imp;
+}
+
+@mixin body-smallest($isImportant: false) {
+  $imp: null;
+
+  @if $isImportant {
+    $imp: !important;
+  }
+  font-family: $font-reg $imp;
+  font-size: 12px $imp;
+  font-weight: 500 $imp;
+  line-height: $lh--smallest $imp;
+}
+
+// Links mixin
+
+@mixin links($default-color: true) {
+  cursor: pointer;
+
+  @if $default-color == true {
+    color: $blue;
+
+    &:enabled:hover,
+    &[href]:hover {
+      color: $blue-dark;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid $blue;
+  }
+}

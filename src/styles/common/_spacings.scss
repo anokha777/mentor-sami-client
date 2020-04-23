@@ -1,0 +1,28 @@
+@for $i from 0 through 12 {
+  @include make-margin($i, $i * 8px !important);
+  @include make-padding($i, $i * 8px !important);
+}
+
+@include make-margin(half, $half-space);
+@include make-padding(half, $half-space);
+
+@include make-margin(16, 16 * 8px !important);
+@include make-padding(16, 16 * 8px !important);
+
+@each $bp in $breakpoints {
+  @media only screen and (map-get($breakpoint-map, $bp)) {
+    @for $i from 0 through 12 {
+      $bpPrefix: "#{$bp}-#{$i}";
+      @include make-margin($bpPrefix, $i * 8px !important);
+      @include make-padding($bpPrefix, $i * 8px !important);
+    }
+
+    $bpPrefix: "#{$bp}-half";
+    @include make-margin($bpPrefix, $half-space !important);
+    @include make-padding($bpPrefix, $half-space !important);
+
+    $bpPrefix: "#{$bp}-16";
+    @include make-margin($bpPrefix, 16 * 8px !important);
+    @include make-padding($bpPrefix, 16 * 8px !important);
+  }
+}

@@ -1,0 +1,20 @@
+@mixin container-default {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding-left: $sml-med-padding;
+  padding-right: $sml-med-padding;
+}
+
+@mixin container {
+  @include breakpoint($lg) {
+    padding-left: $lrg-padding;
+    padding-right: $lrg-padding;
+  }
+
+  @include breakpoint($max) {
+    padding-left: $gaint-padding;
+    padding-right: $gaint-padding;
+  }
+
+  @include container-default();
+}

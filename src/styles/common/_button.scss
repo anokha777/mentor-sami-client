@@ -1,0 +1,11 @@
+.Button {
+  @include button();
+
+  &--primary {
+    background-color: $blue;
+    border: 2px solid $blue;
+    color: $white;
+    text-align: center;
+    padding: 18px 24px;
+  }
+}

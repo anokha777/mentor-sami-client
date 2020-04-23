@@ -1,0 +1,79 @@
+//Button mixin
+@mixin button($min-width: 134px) {
+  width: auto;
+  min-width: $min-width;
+
+  $component: &;
+
+  align-items: center;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  min-height: 56px !important;
+  padding: 18px 24px !important;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+
+  &--small {
+    font-size: 14px;
+    min-height: 40px;
+    min-width: 84px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  &--primary {
+    @include button-link-hover() {
+      background-color: $blue-light;
+      border-color: $blue-light;
+    }
+    background-color: $blue;
+    border: 2px solid $blue;
+    color: $white;
+    text-align: center;
+  }
+
+  &--secondary {
+    @include button-link-hover() {
+      background-color: $blue;
+      border: 2px solid $blue;
+      color: $white;
+    }
+    background-color: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+    text-align: center;
+  }
+}
+
+@mixin button-link-hover() {
+  &:hover,
+  &:enabled:hover,
+  &:enabled:focus {
+    @content;
+  }
+}
+
+@mixin button-link-focus($outlined-color: $blue-light) {
+  &:focus,
+  &:enabled:focus {
+    outline-color: $outlined-color;
+    outline-offset: 3px;
+    outline-style: solid;
+    outline-width: 2px;
+  }
+}
+
+@mixin button-small($min-width: "84px") {
+  &--small {
+    font-size: 14px;
+    min-height: 40px;
+    min-width: $min-width;
+  }
+}

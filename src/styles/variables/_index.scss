@@ -1,0 +1,154 @@
+/*********************************************
+Style Guide-Please use variable name from style guide
+**********************************************/
+
+//colors
+
+$white: #ffffff;
+$light: #aeb6be;
+$lighter: #ece6f3;
+$dark: #676869;
+$darker: #22263f;
+$transparent: transparent;
+$accent: #f4a83e;
+$blue-light: #3b98e2;
+$blue: #2878c4;
+$blue-hover: rgba($blue, 0.1);
+$confirmation: #1ea382;
+$alert: #d8761c;
+
+//
+//Z-indices
+//
+
+$z-index0: 0;
+$z-index1: 1;
+$z-index2: 2;
+$z-index9: 9;
+$z-index10: 10;
+$z-index--footer: 5000;
+$z-index-nav: 6000;
+
+//
+//Headers line heights
+//
+$lh--h1: 50px;
+$lh--h1-base: 38px;
+$lh--h2: 34px;
+$lh--h2-base: 30px;
+$lh--h3: 30px;
+$lh--h3-base: 22px;
+$lh--h4: 22px;
+$lh--h4-base: 20px;
+
+//
+//Text line heights
+//
+$lh--large: 30px;
+$lh--large-base: 26px;
+$lh--regular: 26px;
+$lh--regular-tight: $lh--regular;
+$lh--small: 22px;
+$lh--small-tight: $lh--small;
+$lh--smallest: 18px;
+$lh--smallest-tight: 14px;
+
+//
+// Mobile Breakpoints
+//
+$sm-width: 640;
+$md-width: 768;
+$lg-width: 1060;
+$xl-width: 1280;
+
+$sml-width: $sm-width * 1px;
+$med-width: $md-width * 1px;
+$lrg-width: $lg-width * 1px;
+$x-lrg-width: $xl-width * 1px;
+$max-width: 1440px;
+
+$sm: min-width $sml-width;
+$md: min-width $med-width;
+$lg: min-width $lrg-width;
+$xl: min-width $x-lrg-width;
+$max: min-width $max-width;
+
+//To be used in for loop generated class
+$breakpoint-map: (
+  sml: "min-width:" + $sml-width,
+  med: "min-width:" + $med-width,
+  lrg: "min-width:" + $lrg-width,
+  x-lrg: "min-width:" + $x-lrg-width,
+);
+
+//Breakpoints
+$breakpoints: sml med lrg x-lrg;
+
+//Layer constants
+$border-width: 4px;
+$border-radius: 4px;
+$border-radius-circle: 50%;
+$border-radius-reset: 0;
+$border-width: 1px;
+
+$layer-static-drop-shadow: 0;
+$layer-interactive-drop-shadow: 0 2px 0 0 $lighter;
+$layer-elevated-drop-shadow: 0 2px 4px 0 $lighter;
+$layer-elevated-caret-shadow: 2px 2px 4px 0 $lighter;
+
+//font family
+
+$font-reg: helvetica, arial, sans-serif;
+
+//Padding
+$sml-med-padding: 5%;
+$lrg-padding: 9%;
+$gaint-padding: 100px;
+
+//Spacing
+$spacer-unit: 8;
+
+$half-spacer-unit: $spacer-unit/2;
+$x1-space-unit: $spacer-unit;
+$x2-space-unit: 2 * $spacer-unit;
+$x3-space-unit: 3 * $spacer-unit;
+$x4-space-unit: 4 * $spacer-unit;
+$x5-space-unit: 5 * $spacer-unit;
+$x6-space-unit: 6 * $spacer-unit;
+$x7-space-unit: 7 * $spacer-unit;
+$x8-space-unit: 8 * $spacer-unit;
+$x9-space-unit: 9 * $spacer-unit;
+$x10-space-unit: 10 * $spacer-unit;
+$x11-space-unit: 11 * $spacer-unit;
+$x12-space-unit: 12 * $spacer-unit;
+$x16-space-unit: 16 * $spacer-unit;
+
+$half-space: $half-spacer-unit * 1px;
+$x1-space: $x1-space-unit * 1px;
+$x2-space: $x2-space-unit * 1px;
+$x3-space: $x3-space-unit * 1px;
+$x4-space: $x4-space-unit * 1px;
+$x5-space: $x5-space-unit * 1px;
+$x6-space: $x6-space-unit * 1px;
+$x7-space: $x7-space-unit * 1px;
+$x8-space: $x8-space-unit * 1px;
+$x9-space: $x9-space-unit * 1px;
+$x10-space: $x10-space-unit * 1px;
+$x11-space: $x11-space-unit * 1px;
+$x12-space: $x12-space-unit * 1px;
+$x16-space: $x16-space-unit * 1px;
+
+//Button width
+$btn-min-width: 134px;
+
+:export {
+  white: $white;
+  light: $light;
+  lighter: $lighter;
+  dark: $dark;
+  darker: $darker;
+  light: $light;
+  lighter: $lighter;
+  blue: $blue;
+  blue-light: $blue-light;
+}

@@ -1,0 +1,37 @@
+//Layers
+
+@mixin layer-static {
+  border: 1px solid $lighter;
+  border-radius: $border-radius;
+  box-shadow: $layer-static-drop-shadow;
+}
+
+@mixin layer-interactive {
+  border: 1px solid $lighter;
+  border-radius: $border-radius;
+  box-shadow: $layer-interactive-drop-shadow;
+}
+
+@mixin layer-elevated {
+  border: 1px solid $lighter;
+  border-radius: $border-radius;
+  box-shadow: $layer-elevated-drop-shadow;
+}
+
+@mixin layer-elevated {
+  border: 1px solid $lighter;
+  border-radius: $border-radius;
+  box-shadow: $layer-elevated-drop-shadow;
+}
+
+@mixin layer-elevated {
+  border: 1px solid $lighter;
+  border-radius: $border-radius;
+  box-shadow: $layer-elevated-caret-shadow;
+}
+
+@mixin layer-reset {
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0;
+}

@@ -1,0 +1,73 @@
+h1 {
+  @include h1;
+}
+h2 {
+  @include h2;
+}
+h3 {
+  @include h3;
+}
+
+.h1 {
+  @include h1(true);
+}
+.h2 {
+  @include h2(true);
+}
+.h3 {
+  @include h3(true);
+}
+
+.text {
+  &--large {
+    @include body-large(true);
+  }
+  &--regular {
+    @include body-regular(true);
+  }
+  &--small {
+    @include body-small(true);
+  }
+  &--smallest {
+    @include body-smallest(true);
+  }
+
+  //Colors
+  &--white {
+    color: $white !important;
+  }
+  &--light {
+    color: $light !important;
+  }
+  &--lighter {
+    color: $lighter !important;
+  }
+  &--dark {
+    color: $dark !important;
+  }
+  &--darker {
+    color: $darker !important;
+  }
+  &--accent {
+    color: $accent !important;
+  }
+  &--blue--light {
+    color: $blue-light !important;
+  }
+  &--blue {
+    color: $blue !important;
+  }
+}
+
+// Text Alignmnet
+.ta {
+  &--left {
+    text-align: left !important;
+  }
+  &--center {
+    text-align: center !important;
+  }
+  &--right {
+    text-align: right !important;
+  }
+}
